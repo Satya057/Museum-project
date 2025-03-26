@@ -1,0 +1,57 @@
+.popup-video-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    max-width: 1200px;
+    background: #000;
+    z-index: 1000;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.popup-video-player {
+    width: 100%;
+    display: block;
+}
+
+.popup-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.popup-play-pause-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.popup-progress-bar {
+    flex-grow: 1;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+.popup-progress {
+    height: 100%;
+    background: white;
+    width: 0;
+}
+
+.popup-time-display {
+    color: white;
+    font-size: 14px;
+} 
