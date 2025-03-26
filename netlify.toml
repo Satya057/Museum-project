@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/*"
+  to = "/local-index-html.html"
+  status = 200 
