@@ -5,10 +5,10 @@ const config = {
   
   // Thumbnail images
   thumbnails: [
-    "../images/Window01.png", // Thumbnail 1
-    "../images/Window02.png", // Thumbnail 2
-    "../images/Window03.png", // Thumbnail 3
-    "../images/Window04.png"  // Thumbnail 4
+    "../images/Window 01.png", // Thumbnail 1
+    "../images/Window 02.png", // Thumbnail 2
+    "../images/Window 03.png", // Thumbnail 3
+    "../images/Window 04.png"  // Thumbnail 4
   ],
   
   // Video files

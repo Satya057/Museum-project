@@ -8,19 +8,12 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Popup Video Container -->
-    <div class="popup-video-container" id="popup-video-container" style="width: 90%;">
+    <!-- Screensaver Video Container -->
+    <div class="popup-video-container" id="popup-video-container">
         <video class="popup-video-player" id="popup-video-player" autoplay muted>
             <source src="videos/00_BrockwellHall_OralHistory_AttractorScreen_v01.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <div class="popup-controls">
-            <button class="popup-play-pause-btn">Play</button>
-            <div class="popup-progress-bar">
-                <div class="popup-progress"></div>
-            </div>
-            <span class="popup-time-display">0:00</span>
-        </div>
     </div>
 
     <!-- Thumbnails -->
@@ -113,7 +106,7 @@
     <script src="local-script-js.js"></script>
     <script>
         let inactivityTimer;
-        const inactivityDelay = 30000; // 30 seconds
+        const inactivityDelay = 5000; // 30 seconds
         const popupVideo = document.getElementById('popup-video-container');
         const popupVideoPlayer = document.getElementById('popup-video-player');
 
