@@ -10,7 +10,7 @@
 <body>
     <!-- Screensaver Video Container -->
     <div class="popup-video-container" id="popup-video-container">
-        <video class="popup-video-player" id="popup-video-player" autoplay muted>
+        <video class="popup-video-player" id="popup-video-player" autoplay muted loop>
             <source src="videos/00_BrockwellHall_OralHistory_AttractorScreen_v01.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -124,13 +124,16 @@
         // Reset timer on user activity
         function resetInactivityTimer() {
             clearTimeout(inactivityTimer);
-            popupVideo.style.display = 'none';
-            popupVideoPlayer.pause();
+            if (popupVideo.style.display === 'block') {
+                popupVideo.style.display = 'none';
+                popupVideoPlayer.pause();
+            }
             
             inactivityTimer = setTimeout(() => {
                 // Only show popup if no other video is playing
                 if (!isAnyVideoPlaying()) {
                     popupVideo.style.display = 'block';
+                    popupVideoPlayer.currentTime = 0; // Reset video to start
                     popupVideoPlayer.play();
                 }
             }, inactivityDelay);
@@ -143,6 +146,14 @@
 
         // Start the timer when page loads
         resetInactivityTimer();
+
+        // Add event listener for when main videos start playing
+        document.querySelectorAll('.video-player').forEach(video => {
+            video.addEventListener('play', () => {
+                popupVideo.style.display = 'none';
+                popupVideoPlayer.pause();
+            });
+        });
     </script>
 </body>
 </html>
